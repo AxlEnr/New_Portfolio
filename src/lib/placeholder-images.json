@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-profile",
+      "description": "Profile picture for hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1672794444732-e007954a177c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjcyODUyNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait person"
+    },
+    {
+      "id": "project-1-thumb",
+      "description": "Thumbnail for project 1",
+      "imageUrl": "https://images.unsplash.com/photo-1604011237320-8e0506614fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzY3MjE2Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "project-1-carousel-1",
+      "description": "Carousel image 1 for project 1",
+      "imageUrl": "https://images.unsplash.com/photo-1694878982093-25e8897ec9d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWJzaXRlJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NzMwNDMxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website interface"
+    },
+    {
+      "id": "project-1-carousel-2",
+      "description": "Carousel image 2 for project 1",
+      "imageUrl": "https://images.unsplash.com/photo-1517650862521-d580d5348145?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2RlJTIwc25pcHBldHxlbnwwfHx8fDE3NjczMDQzMTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code snippet"
+    },
+    {
+      "id": "project-2-thumb",
+      "description": "Thumbnail for project 2",
+      "imageUrl": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzY3MjUzODI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "project-2-carousel-1",
+      "description": "Carousel image 1 for project 2",
+      "imageUrl": "https://images.unsplash.com/photo-1587440871875-191322ee64b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx1c2VyJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NzE4Mzg1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user interface"
+    },
+    {
+      "id": "project-2-carousel-2",
+      "description": "Carousel image 2 for project 2",
+      "imageUrl": "https://images.unsplash.com/photo-1758598305216-b8cf416cb5b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcHBsaWNhdGlvbiUyMHNjcmVlbnxlbnwwfHx8fDE3NjczMDQzMTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "application screen"
+    },
+    {
+      "id": "project-3-thumb",
+      "description": "Thumbnail for project 3",
+      "imageUrl": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjcyMjE1Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data visualization"
+    },
+    {
+      "id": "project-3-carousel-1",
+      "description": "Carousel image 1 for project 3",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MHx8fHwxNzY3MzAzNzQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard analytics"
+    },
+    {
+      "id": "certificate-1",
+      "description": "Certificate 1 image",
+      "imageUrl": "https://images.unsplash.com/photo-1657114162943-04988ff671d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjZXJ0aWZpY2F0ZSUyMGRvY3VtZW50fGVufDB8fHx8MTc2NzI4MDY5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate document"
+    },
+    {
+      "id": "certificate-2",
+      "description": "Certificate 2 image",
+      "imageUrl": "https://images.unsplash.com/photo-1706340674031-acaaf6e2144b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhd2FyZCUyMGRpcGxvbWF8ZW58MHx8fHwxNzY3MzA0MzE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "award diploma"
+    },
+    {
+      "id": "certificate-3",
+      "description": "Certificate 3 image",
+      "imageUrl": "https://images.unsplash.com/photo-1588942458058-55beb017132c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvZmZpY2lhbCUyMHNlYWx8ZW58MHx8fHwxNzY3MjY3OTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "official seal"
+    }
+  ]
 }
