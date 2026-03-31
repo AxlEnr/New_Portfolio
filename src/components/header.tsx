@@ -28,7 +28,6 @@ export default function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
 
   const handleResumeDownload = (language: 'en' | 'es') => {
-    // Placeholder for resume download logic
     alert(`Downloading ${language.toUpperCase()} resume...`);
   };
 
@@ -53,8 +52,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#home" className="flex items-center gap-2 font-bold text-lg font-headline">
-          <Code className="h-6 w-6 text-primary" />
+        <a href="#home" className="flex ml-1 md:ml-4 items-center gap-2 font-bold text-lg font-headline">
+          {/* <Code className="h-6 w-6 text-primary" /> */}
           <span>{t('hero.name')}</span>
         </a>
 
