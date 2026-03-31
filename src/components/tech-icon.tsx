@@ -1,76 +1,85 @@
-import { cn } from '@/lib/utils';
-import { Code } from 'lucide-react';
+import Image from "next/image";
 
-const TechIcon = ({ tech, small = false }: { tech: string, small?: boolean }) => {
-  const iconMap: Record<string, React.ReactNode> = {
-    laravel: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.012 0L.002 6.06v1.493l5.06 3.018v2.988l-5.06 2.973v1.493L12.012 24l12.01-6.975v-1.493l-5.06-2.973v-2.988l5.06-3.018V6.06zm-7.01 7.53l7.01-4.065 7.01 4.065-3.505 2.05-3.505-2.05zm0 8.97l7.01-4.065 7.01 4.065-3.505 2.05-3.505-2.05zM5.002 9.08l3.505-2.05 3.505 2.05-3.505 2.05zm7.01 4.905l3.505-2.05 3.505 2.05-3.505 2.05z"/></svg>
-    ),
-    express: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.97 18.26c-.36 3.28-3.53 5.74-7.2 5.74-4.22 0-7.6-2.9-7.6-7.38s3.4-7.37 7.6-7.37c1.78 0 3.3.44 4.54 1.25l-2.6 3.47c-.24-.13-.5-.22-.8-.22-.9 0-1.63.48-1.63 1.54 0 1.25.9 1.67 2.13 1.67h1.4c.68 0 1.05-.13 1.28-.22.04.4.06.8.06 1.18zm-23.97-6.5h6.14c3.4 0 5.6 1.8 5.6 4.5s-2.18 4.54-5.6 4.54H0V11.76zm4.18 6.5h1c1.1 0 1.7-.6 1.7-1.48s-.6-1.47-1.7-1.47h-1v2.95zM12.1 0v7.6l-2.4-2.1-.1.1 2.5 2.2-2.5 2.2.1.1 2.4-2.1v7.6h1.2V0h-1.2z"/></svg>
-    ),
-    angular: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L.49 3.91l1.6 14.22L12 24l9.91-5.87 1.6-14.22L12 0zm0 2.43l8.43 3.09L18.9 18.15H5.1L3.57 5.52 12 2.43zM12 6.5l-5.3 5.4h2.5l2.8-2.8 2.8 2.8h2.5L12 6.5z"/></svg>
-    ),
-    mysql: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.045 14.933c-2.455 0-4.45-1.995-4.45-4.45S9.59 6.033 12.045 6.033s4.45 1.995 4.45 4.45-1.995 4.45-4.45 4.45zm0-7.255c-1.574 0-2.805 1.23-2.805 2.805s1.23 2.805 2.805 2.805 2.805-1.23 2.805-2.805-1.23-2.805-2.805-2.805zM19.29 24h-1.594s-.418-1.042-1.24-1.737c-.822-.695-2.22-1.39-4.41-1.39-2.191 0-3.589.695-4.41 1.39-.823.695-1.241 1.737-1.241 1.737H4.793V11.834c.48.33.99.585 1.53.78v-.825c0-1.87 1.594-3.525 3.525-3.525h4.41c1.93 0 3.524 1.655 3.524 3.525v.826c.54-.195 1.05-.45 1.53-.78V24zm-8.82-3.136c.277-.247.54-.465.795-.66v-1.668c-1.254.6-2.077 1.9-2.077 3.375 0 .345.045.675.135.99.39-.42.794-.84 1.147-1.037zM24 8.234c0 .345-.06.69-.15 1.02-.33-.48-.72-.915-1.155-1.32-.435-.405-.915-.75-1.44-1.035V5.503c0-3.045-2.475-5.52-5.52-5.52h-7.65C5.04.017 2.565 2.492 2.565 5.537v1.38c-.525.285-1.005.63-1.44 1.035C.69 8.356.3 8.79.001 9.274c-.09-.33-.15-.675-.15-1.02C-.15 3.69 3.54-.016 8.085-.016h7.65c4.545 0 8.235 3.705 8.235 8.25zm-8.82 12.765c.255.195.75.585 1.14.99.39.42.795.825 1.14 1.035.09-.315.135-.645.135-.99 0-1.47-.822-2.775-2.07-3.375v1.665c.255.195.525.42.795.66.015.015.03.015.045.03z"/></svg>
-    ),
-    mongo: (
-       <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.155 15.335c-.44-.22-1.01-.404-1.68-.52.288-.34.502-.8.502-1.353 0-.588-.237-1.08-.58-1.45.63-.15 1.17-.46 1.55-.88.37-.41.56-1.01.56-1.77 0-1.4-.6-2.5-1.9-2.9v-.02c.02-.2.03-.4.03-.6v-.34c.03-.8-.3-1.5-.9-2.1-.6-.6-1.4-.9-2.2-.9-.8 0-1.5.3-2.1.9-.6.6-.9 1.4-.9 2.2v.3c0 .2.01.4.03.6v.02c-1.2.4-1.8 1.5-1.8 2.9 0 .75.2 1.36.56 1.77.38.42.92.73 1.55.88-.34.37-.58.86-.58 1.45 0 .55.21 1.01.5 1.35-1.2.2-2.3.61-2.3 1.22 0 .69 1.4 1.25 3.4 1.25s3.4-.56 3.4-1.25c0-.61-1.1-1.02-2.32-1.22zm-5.46-3.88c-.06-.1-.1-.2-.1-.3 0-.3.2-.6.5-.6.3 0 .5.3.5.6 0 .1-.04.2-.1.3l-.4.02z"/></svg>
-    ),
-    react: (
-      <svg role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.48m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
-    ),
-    nest: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.16 0 4.63 1.54 2 4.07v15.86C4.63 22.46 8.16 24 12 24s7.37-1.54 10-4.07V4.07C19.37 1.54 15.84 0 12 0zM7.22 7.22c.16-.16.35-.22.56-.22.42 0 .78.33.8.74l.05 1.15c.34-1.34 1.39-2.25 2.6-2.25.21 0 .42.02.62.06.41.08.68.49.6.9l-.02.08c-.2-1.3-1.27-2.22-2.5-2.22a2.33 2.33 0 0 0-2.33 2.33v3.52c0 .41-.33.74-.74.74a.75.75 0 0 1-.75-.75l.01-4.14zm9.56 9.56c-.16.16-.35.22-.56.22-.42 0-.78-.33-.8-.74l-.05-1.15c-.34 1.34-1.39 2.25-2.6 2.25a2.71 2.71 0 0 1-.62-.06c-.41-.08-.68-.49-.6-.9l.02-.08c.2 1.3 1.27 2.22 2.5 2.22A2.33 2.33 0 0 0 17 17.5v-3.52c0-.41.33-.74.74-.74a.75.75 0 0 1 .75.75l-.01 4.14z"/></svg>
-    ),
-    flutter: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14.314 0L6.833 7.485l4.318 4.283 7.485-7.485L14.314 0zm-7.48 7.485l-4.283 4.318L10.017 24l4.283-4.283-7.466-7.467zM10.017 24l7.485-7.452 4.318-4.318-7.485 7.452-4.318 4.318z"/></svg>
-    ),
-    django: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 0h14.24v2.969H3V0zm0 4.453h14.24v2.969H3V4.453zm0 4.453h14.24v2.969H3V8.906zm0 4.453H14.24V16.33H3v-2.97zm0 4.453h14.24v2.969H3v-2.969zm18-5.938v10.407h-2.968V5.867H21v5.938z"/></svg>
-    ),
-    python: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.955.012c-3.23 0-5.875 2.628-5.875 5.857v2.24h2.247V5.87c0-1.99 1.637-3.613 3.628-3.613h4.48V0H11.955zM11.955.012V2.25h2.24v4.493H5.87C2.64 6.742.013 9.38.013 12.61s2.627 5.868 5.857 5.868h2.24v2.247H5.87c-4.502 0-8.114-3.612-8.114-8.115C-2.244 8.112 1.368 4.492 5.87 4.492h.013V2.25H5.87C2.64 2.25.013 4.878.013 8.118s2.627 5.868 5.857 5.868h2.24v2.247H5.87c-3.23 0-5.857-2.628-5.857-5.868S2.64 2.25 5.87 2.25h6.085V.012h-.013zM12.045 23.988c3.23 0 5.875-2.628 5.875-5.857v-2.24h-2.247v2.24c0 1.99-1.637 3.613-3.628 3.613h-4.48V24h6.075v-.012zm0 0v-2.25h-2.24v-4.493h8.327c3.23 0 5.857-2.64 5.857-5.87 0-3.23-2.628-5.857-5.857-5.857h-2.24V0h2.24c4.502 0 8.115 3.613 8.115 8.114c0 4.503-3.613 8.115-8.115 8.115h-.012v2.247h.012c3.23 0 5.857 2.627 5.857 5.857s-2.628 5.857-5.857 5.857H12.045v.012h.012z"/></svg>
-    ),
-    java: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.16 1.8L12 6.035 6.84 1.8 0 5.234l3.12 3.14L1.08 14.58l4.234 4.234L11.52 12.6l3.6 2.52 1.44-1.8L12 10.43l5.16-5.2zM2.88 2.88c.18-.36 3-2.52 3.96 0L12 6.71l5.16-3.83c.96-2.52 3.78 0 3.96 0l2.88 2.88-5.16 5.16-2.88-2.16L12 4.19l-4.68 4.5 2.88 2.16L5.04 15.95l-2.16-2.16L0 17.03l2.88-2.88 2.16 2.16L12 11.87l3.96 3.96L12 20.39l-2.16-2.16-2.88 2.88 2.88 2.88 2.16-2.16L12 24l7.2-7.2-2.16-2.16z"/></svg>
-    ),
-    html: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1.603 0h20.794L20.67 21.641 12 24l-8.67-2.359L1.603 0zM12 2.163h7.103l-1.39 15.54-5.713 1.58V2.163zM12 9.073H6.48l.244 2.72h5.276v2.719H4.15l-.488-5.439H12v2.72z"/></svg>
-    ),
-    css: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1.603 0h20.794L20.67 21.641 12 24l-8.67-2.359L1.603 0zM12 2.163v17.418l5.713-1.58L19.103 2.163H12zm0 6.91H4.988l-.244-2.72H12v2.72zm0 5.438H7.39l.244 2.719L12 18.03v-2.52z"/></svg>
-    ),
-    tailwind: (
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
-    ),
-  };
-  
-  const icon = iconMap[tech] || <Code />;
-
-  return (
-    <div className={cn(
-      "flex flex-col items-center justify-center text-center gap-2 transition-transform hover:-translate-y-1",
-      small ? "w-20" : "w-28"
-    )}>
-      <div className={cn(
-        "bg-card p-4 rounded-lg shadow-md flex items-center justify-center transition-colors hover:bg-primary/10",
-        small ? "w-16 h-16" : "w-24 h-24"
-      )}>
-        <div className={cn(
-          "text-primary",
-          small ? "w-8 h-8" : "w-12 h-12"
-        )}>
-          {icon}
-        </div>
-      </div>
-      <span className={cn(
-        "font-medium text-muted-foreground",
-        small ? "text-xs" : "text-sm"
-      )}>{tech.charAt(0).toUpperCase() + tech.slice(1)}</span>
-    </div>
-  );
+type Props = {
+  tech: string;
+  small?: boolean;
 };
 
-export default TechIcon;
+const techMap: Record<string, string> = {
+  laravel: "devicon-laravel-plain colored",
+  react: "devicon-react-original colored",
+  angular: "devicon-angularjs-plain colored",
+  flutter: "devicon-flutter-plain colored",
+  django: "devicon-django-plain",
+  flask: "devicon-flask-original",
+  express: "devicon-express-original",
+  nestjs: "devicon-nestjs-plain colored",
+  mysql: "devicon-mysql-plain colored",
+  mongodb: "devicon-mongodb-plain colored",
+  postgresql: "devicon-postgresql-plain colored",
+  sqlite: "devicon-sqlite-plain colored",
+  redis: "devicon-redis-plain colored",
+  javascript: "devicon-javascript-plain colored",
+  typescript: "devicon-typescript-plain colored",
+  html: "devicon-html5-plain colored",
+  css: "devicon-css3-plain colored",
+  tailwind: "devicon-tailwindcss-plain colored",
+  bootstrap: "devicon-bootstrap-plain colored",
+  sass: "devicon-sass-original",
+  docker: "devicon-docker-plain colored",
+  linux: "devicon-linux-plain",
+  git: "devicon-git-plain colored",
+  postman: "devicon-postman-plain",
+  prismaorm: "devicon-prisma-original",
+  android: "devicon-android-plain colored",
+  java: "devicon-java-plain colored",
+};
+
+const customIcons = [
+  "webmin",
+  "termius",
+];
+
+export default function TechIcon({ tech, small }: Props) {
+  const key = tech
+    .toLowerCase()
+    .replace(/\s|\(|\)|&|\/|-/g, "");
+
+  const iconClass = techMap[key];
+  const size = small ? 28 : 40;
+
+  return (
+    <div className="flex flex-col items-center gap-1">
+
+      {iconClass && (
+        <i className={iconClass} style={{ fontSize: size }} />
+      )}
+
+      {!iconClass && customIcons.includes(key) && (
+        <Image
+          src={`/tech/${key}.svg`}
+          alt={tech}
+          width={size}
+          height={size}
+        />
+      )}
+
+      {!iconClass && !customIcons.includes(key) && (
+        <div
+          className="flex items-center justify-center rounded-md border text-[10px] font-semibold"
+          style={{
+            width: size,
+            height: size,
+          }}
+        >
+          {tech.slice(0, 2).toUpperCase()}
+        </div>
+      )}
+
+      {/* label */}
+      <span className="text-[10px] text-muted-foreground text-center">
+        {tech}
+      </span>
+    </div>
+  );
+}

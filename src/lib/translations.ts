@@ -22,6 +22,15 @@ type Translations = {
   es: AllText;
 };
 
+type SkillStack = {
+  backend: string[];
+  frontend: string[];
+  mobile: string[];
+  databases: string[];
+  devops: string[];
+  tools: string[];
+};
+
 type AllText = {
   nav: {
     home: string;
@@ -46,6 +55,15 @@ type AllText = {
   skills: {
     mainStack: string;
     otherTech: string;
+
+    backend: string;
+    frontend: string;
+    mobile: string;
+    databases: string;
+    devops: string;
+    tools: string;
+
+    stack: SkillStack;
   };
   projects: {
     title: string;
@@ -58,7 +76,6 @@ type AllText = {
     certificates: Certificate[];
   };
   footer: {
-    madeWith: string;
     by: string;
   };
 };
@@ -79,18 +96,40 @@ export const translations: Translations = {
     },
     hero: {
       greeting: "Hi, I'm",
-      name: 'John Doe',
-      title: 'Full Stack Developer',
+      name: 'Axel Enrique García Vázquez',
+      title: 'Backend Developer',
       intro:
-        'A passionate developer with experience in creating modern and responsive web applications. I love turning ideas into reality through code.',
+        'Backend developer specialized in Laravel and API development, with real-world experience integrating services and deploying scalable systems.',
       readMore: 'Read More',
-      detailedBio:
-        'With a solid background in both frontend and backend technologies, I have successfully delivered projects from concept to deployment. My expertise lies in the JavaScript ecosystem, but I am always eager to learn new technologies and take on challenging tasks. I am a problem-solver at heart and strive to write clean, efficient, and maintainable code.',
+      detailedBio: `I am a backend developer with production experience using Laravel and API-based architectures. I have worked on real systems integrating services such as Stripe, Plaid, Twilio, and logistics APIs, as well as deploying and maintaining applications on Linux servers.
+
+I have also worked across the stack using technologies like Angular, React, and mobile frameworks, allowing me to build and understand complete systems. My experience includes PHP, JavaScript, TypeScript, Python, and C, along with MySQL and MongoDB.
+
+Beyond development, I have hands-on experience with infrastructure and tools such as Docker, Redis, Mailpit, Meilisearch, Webmin, and Termius.
+
+I focus on building scalable systems, clean architecture, and high-performance backend solutions, always aiming for practical and efficient implementations.`,
     },
+
     skills: {
       mainStack: 'Main Stack',
       otherTech: 'Other Technologies',
+      backend: 'Backend',
+      frontend: 'Frontend',
+      mobile: 'Mobile',
+      databases: 'Databases',
+      devops: 'DevOps & Infrastructure',
+      tools: 'Tools',
+
+      stack: {
+        backend: ['Laravel', 'NestJS', 'Express', 'Django', 'Flask'],
+        frontend: ['React', 'Angular', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Bootstrap', 'Tailwind', 'SASS'],
+        mobile: ['Flutter', 'Java'],
+        databases: ['MySQL', 'MongoDB', 'SQLite', 'MariaDB', 'PrismaORM', 'Redis'],
+        devops: ['Docker', 'Linux', 'Webmin'],
+        tools: ['Git', 'Termius', 'Postman'],
+      },
     },
+
     projects: {
       title: 'My Projects',
       viewDetails: 'View Details',
@@ -98,70 +137,132 @@ export const translations: Translations = {
       projects: [
         {
           id: 'proj1',
-          title: 'E-Commerce Platform',
-          shortDescription: 'A full-featured online store with a modern UI and a robust backend.',
+          title: 'MIAU - Pet Management Platform',
+          shortDescription:
+            'Mobile and backend platform for managing pets, owners, and related services.',
           longDescription:
-            'This project is a comprehensive e-commerce solution built with a powerful backend for managing products, orders, and users. The frontend is a highly interactive and responsive user interface, providing a seamless shopping experience across all devices. It includes features like product search, filtering, shopping cart, and a secure checkout process.',
-          thumbId: 'project-1-thumb',
-          carouselImageIds: ['project-1-carousel-1', 'project-1-carousel-2'],
+            'A full-stack application built with Flutter for the mobile frontend and Django for the backend. Designed to manage pets, owners, and related services such as records, tracking, and administrative operations. The system uses an API-driven architecture, authentication, and scalable backend services.',
+          thumbId: 'project-miau-thumb',
+          carouselImageIds: ['project-miau-1'],
           codeUrl: 'https://github.com',
-          tags: ['Laravel', 'Angular', 'MySQL'],
+          tags: ['Flutter', 'Django', 'API', 'Mobile', 'Backend'],
         },
         {
           id: 'proj2',
-          title: 'Social Media App',
-          shortDescription: 'A mobile-first social networking application for connecting people.',
+          title: 'Cybersecurity Website',
+          shortDescription:
+            'Educational platform focused on cybersecurity awareness.',
           longDescription:
-            'A social media application designed for mobile users, built with Flutter for cross-platform compatibility. It allows users to create profiles, post updates, follow other users, and interact with content through likes and comments. The backend is powered by Express and MongoDB, ensuring scalability and real-time updates.',
-          thumbId: 'project-2-thumb',
-          carouselImageIds: ['project-2-carousel-1', 'project-2-carousel-2'],
+            'A web application developed with Angular, focused on educating users about cybersecurity practices, threats, and prevention techniques. Built with a responsive and modular frontend architecture.',
+          thumbId: 'project-cyber-thumb',
+          carouselImageIds: ['project-cyber-1'],
           codeUrl: 'https://github.com',
-          tags: ['Express', 'MongoDB', 'Flutter'],
+          tags: ['Angular', 'Frontend', 'Web App'],
         },
         {
           id: 'proj3',
-          title: 'Data Analytics Dashboard',
-          shortDescription: 'An interactive dashboard for visualizing and analyzing complex datasets.',
+          title: 'Flower Shop Website (Hidalgo)',
+          shortDescription:
+            'Commercial website for a local business with modern UI.',
           longDescription:
-            'This project features a data analytics dashboard built with React and D3.js to provide rich, interactive data visualizations. It connects to a Python backend using Django to process and serve data. Users can explore data through various charts and graphs, apply filters, and gain insights from complex information.',
+            'A modern web application built with React and Next.js for a flower shop business. Focused on performance, SEO, and clean UI/UX to improve digital presence and customer interaction.',
+          thumbId: 'project-flowers-thumb',
+          carouselImageIds: ['project-flowers-1'],
+          codeUrl: 'https://github.com',
+          tags: ['React', 'Next.js', 'Frontend', 'SEO'],
+        },
+        {
+          id: 'proj4',
+          title: 'HydroStop - Smart Shower IoT System',
+          shortDescription:
+            'IoT system for monitoring and controlling water usage in real environments.',
+          longDescription:
+            'An IoT solution built with Django (backend), Android (Java) mobile app, and ESP32 programmed in C. Designed to monitor and control water usage in environments like gyms and hotels, integrating hardware and software in a complete system.',
+          thumbId: 'project-1-thumb',
+          carouselImageIds: ['project-1-carousel-1'],
+          codeUrl: 'https://github.com',
+          tags: ['IoT', 'Django', 'Android', 'ESP32', 'C'],
+        },
+        {
+          id: 'proj5',
+          title: 'ContApp - Accounting Learning Platform',
+          shortDescription:
+            'Educational platform with task management and evaluations.',
+          longDescription:
+            'A full-stack application developed with React (web), React Native (mobile), Express (backend), and MySQL. Enables teachers to assign activities and evaluate students through an interactive platform.',
+          thumbId: 'project-2-thumb',
+          carouselImageIds: ['project-2-carousel-1'],
+          codeUrl: 'https://github.com',
+          tags: ['React', 'React Native', 'Express', 'MySQL'],
+        },
+        {
+          id: 'proj6',
+          title: 'GAMA - IoT Learning Assistant',
+          shortDescription:
+            'Educational assistant for learning IoT with AI integration.',
+          longDescription:
+            'A learning platform built with Flask, integrated with the OpenAI API, and deployed on CrowPi L hardware. Includes interactive examples using HTML, CSS, and JavaScript to teach IoT concepts in a practical way.',
           thumbId: 'project-3-thumb',
           carouselImageIds: ['project-3-carousel-1'],
           codeUrl: 'https://github.com',
-          tags: ['React', 'Django', 'Python'],
+          tags: ['Flask', 'OpenAI API', 'IoT', 'HTML', 'JavaScript', 'CrowPi'],
         },
       ],
     },
+
     certificates: {
       title: 'Certifications',
       certificates: [
         {
           id: 'cert1',
-          title: 'Full Stack Web Development',
-          issuer: 'Tech Academy',
-          date: 'June 2023',
+          title: 'Python Fundamentals',
+          issuer: 'Cisco',
+          date: '2024',
           imageId: 'certificate-1',
         },
         {
           id: 'cert2',
-          title: 'Advanced React Concepts',
-          issuer: 'React University',
-          date: 'January 2023',
+          title: 'Database Administrator',
+          issuer: 'Aprende.org',
+          date: '2024',
           imageId: 'certificate-2',
         },
         {
           id: 'cert3',
-          title: 'Database Management Pro',
-          issuer: 'Data School',
-          date: 'September 2022',
+          title: 'C# Programming',
+          issuer: 'Aprende.org',
+          date: '2023',
           imageId: 'certificate-3',
+        },
+        {
+          id: 'cert4',
+          title: 'Frontend Development',
+          issuer: 'Aprende.org',
+          date: '2025',
+          imageId: 'certificate-4',
+        },
+        {
+          id: 'cert5',
+          title: 'Team Leadership',
+          issuer: 'Aprende.org',
+          date: '2024',
+          imageId: 'certificate-5',
+        },
+        {
+          id: 'cert6',
+          title: 'Work Discipline',
+          issuer: 'Aprende.org',
+          date: '2024',
+          imageId: 'certificate-6',
         },
       ],
     },
+
     footer: {
-      madeWith: 'Made with',
-      by: 'by John Doe',
+      by: 'Axel Enrique García Vázquez',
     },
   },
+
   es: {
     nav: {
       home: 'Inicio',
@@ -177,18 +278,41 @@ export const translations: Translations = {
     },
     hero: {
       greeting: 'Hola, soy',
-      name: 'John Doe',
-      title: 'Desarrollador Full Stack',
+      name: 'Axel Enrique García Vázquez',
+      title: 'Desarrollador Backend',
       intro:
-        'Un desarrollador apasionado con experiencia en la creación de aplicaciones web modernas y receptivas. Me encanta convertir ideas en realidad a través del código.',
-      readMore: 'Leer Más',
-      detailedBio:
-        'Con una sólida formación en tecnologías de frontend y backend, he entregado con éxito proyectos desde el concepto hasta la implementación. Mi experiencia radica en el ecosistema de JavaScript, pero siempre estoy ansioso por aprender nuevas tecnologías y asumir tareas desafiantes. Soy un solucionador de problemas de corazón y me esfuerzo por escribir código limpio, eficiente y mantenible.',
+        'Desarrollador backend especializado en Laravel y APIs, con experiencia real en integración de servicios y despliegue de sistemas.',
+      readMore: 'Leer más',
+      detailedBio: `Soy desarrollador backend con experiencia en sistemas en producción utilizando Laravel y arquitecturas basadas en APIs. He trabajado integrando servicios como Stripe, Plaid, Twilio y APIs de logística, además de desplegar y administrar aplicaciones en servidores Linux.
+
+También he trabajado en frontend y desarrollo móvil, lo que me permite entender y construir sistemas completos. Tengo experiencia con PHP, JavaScript, TypeScript, Python y C, además de bases de datos como MySQL y MongoDB.
+
+Además, he utilizado herramientas e infraestructura como Docker, Redis, Mailpit, Meilisearch, Webmin y Termius.
+
+Me enfoco en construir sistemas escalables, arquitectura limpia y soluciones backend de alto rendimiento.`,
     },
+
     skills: {
       mainStack: 'Stack Principal',
-      otherTech: 'Otras Tecnologías',
+      otherTech: 'Otras Tecnologías que uso',
+
+      backend: 'Backend',
+      frontend: 'Frontend',
+      mobile: 'Mobile',
+      databases: 'Bases de Datos',
+      devops: 'DevOps e Infraestructura',
+      tools: 'Herramientas',
+
+      stack: {
+        backend: ['Laravel', 'NestJS', 'Express', 'Django', 'Flask'],
+        frontend: ['React', 'Angular', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Bootstrap', 'Tailwind', 'SASS'],
+        mobile: ['Flutter', 'Java'],
+        databases: ['MySQL', 'MongoDB', 'SQLite', 'MariaDB', 'PrismaORM', 'Redis'],
+        devops: ['Docker', 'Linux', 'Webmin'],
+        tools: ['Git', 'Termius', 'Postman'],
+      },
     },
+
     projects: {
       title: 'Mis Proyectos',
       viewDetails: 'Ver Detalles',
@@ -196,68 +320,129 @@ export const translations: Translations = {
       projects: [
         {
           id: 'proj1',
-          title: 'Plataforma de E-Commerce',
-          shortDescription: 'Una tienda en línea con todas las funciones, una interfaz de usuario moderna y un backend robusto.',
+          title: 'MIAU - Plataforma de Gestión de Mascotas',
+          shortDescription:
+            'Plataforma móvil y backend para la gestión de mascotas, dueños y servicios relacionados.',
           longDescription:
-            'Este proyecto es una solución integral de comercio electrónico construida con un potente backend para gestionar productos, pedidos y usuarios. El frontend es una interfaz de usuario altamente interactiva y receptiva, que proporciona una experiencia de compra fluida en todos los dispositivos. Incluye características como búsqueda de productos, filtrado, carrito de compras y un proceso de pago seguro.',
-          thumbId: 'project-1-thumb',
-          carouselImageIds: ['project-1-carousel-1', 'project-1-carousel-2'],
+            'Aplicación full-stack desarrollada con Flutter para el frontend móvil y Django para el backend. Permite gestionar mascotas, dueños y servicios asociados como registros, seguimiento y operaciones administrativas. Implementa una arquitectura basada en APIs, autenticación y backend escalable.',
+          thumbId: 'project-miau-thumb',
+          carouselImageIds: ['project-miau-1'],
           codeUrl: 'https://github.com',
-          tags: ['Laravel', 'Angular', 'MySQL'],
+          tags: ['Flutter', 'Django', 'API', 'Mobile', 'Backend'],
         },
         {
           id: 'proj2',
-          title: 'Aplicación de Redes Sociales',
-          shortDescription: 'Una aplicación de redes sociales "mobile-first" para conectar personas.',
+          title: 'Sitio Web de Ciberseguridad',
+          shortDescription:
+            'Plataforma educativa enfocada en concientización en ciberseguridad.',
           longDescription:
-            'Una aplicación de redes sociales diseñada para usuarios móviles, construida con Flutter para compatibilidad multiplataforma. Permite a los usuarios crear perfiles, publicar actualizaciones, seguir a otros usuarios e interactuar con el contenido a través de "me gusta" y comentarios. El backend está impulsado por Express y MongoDB, lo que garantiza la escalabilidad y las actualizaciones en tiempo real.',
-          thumbId: 'project-2-thumb',
-          carouselImageIds: ['project-2-carousel-1', 'project-2-carousel-2'],
+            'Aplicación web desarrollada con Angular, enfocada en educar sobre buenas prácticas, amenazas y prevención en ciberseguridad, utilizando una arquitectura frontend modular.',
+          thumbId: 'project-cyber-thumb',
+          carouselImageIds: ['project-cyber-1'],
           codeUrl: 'https://github.com',
-          tags: ['Express', 'MongoDB', 'Flutter'],
+          tags: ['Angular', 'Frontend', 'Web App'],
         },
         {
           id: 'proj3',
-          title: 'Dashboard de Análisis de Datos',
-          shortDescription: 'Un dashboard interactivo para visualizar y analizar conjuntos de datos complejos.',
+          title: 'Página Web de Flores (Hidalgo)',
+          shortDescription:
+            'Sitio web comercial moderno para negocio local.',
           longDescription:
-            'Este proyecto presenta un panel de análisis de datos creado con React y D3.js para proporcionar visualizaciones de datos ricas e interactivas. Se conecta a un backend de Python que utiliza Django para procesar y servir datos. Los usuarios pueden explorar datos a través de varios cuadros y gráficos, aplicar filtros y obtener información de información compleja.',
+            'Aplicación web desarrollada con React y Next.js, enfocada en rendimiento, SEO y experiencia de usuario para mejorar la presencia digital del negocio.',
+          thumbId: 'project-flowers-thumb',
+          carouselImageIds: ['project-flowers-1'],
+          codeUrl: 'https://github.com',
+          tags: ['React', 'Next.js', 'Frontend', 'SEO'],
+        },
+        {
+          id: 'proj4',
+          title: 'HydroStop - Sistema IoT de Regaderas Inteligentes',
+          shortDescription:
+            'Sistema IoT para monitoreo y control de consumo de agua.',
+          longDescription:
+            'Solución IoT desarrollada con Django (backend), aplicación Android en Java y ESP32 programado en C. Permite controlar y monitorear el uso de agua en entornos reales como gimnasios y hoteles.',
+          thumbId: 'project-1-thumb',
+          carouselImageIds: ['project-1-carousel-1'],
+          codeUrl: 'https://github.com',
+          tags: ['IoT', 'Django', 'Android', 'ESP32', 'C'],
+        },
+        {
+          id: 'proj5',
+          title: 'ContApp - Plataforma de Aprendizaje Contable',
+          shortDescription:
+            'Plataforma educativa con gestión de tareas y evaluaciones.',
+          longDescription:
+            'Aplicación full-stack desarrollada con React, React Native, Express y MySQL, que permite a profesores asignar actividades y evaluar estudiantes.',
+          thumbId: 'project-2-thumb',
+          carouselImageIds: ['project-2-carousel-1'],
+          codeUrl: 'https://github.com',
+          tags: ['React', 'React Native', 'Express', 'MySQL'],
+        },
+        {
+          id: 'proj6',
+          title: 'GAMA - Asistente de Aprendizaje IoT',
+          shortDescription:
+            'Asistente educativo para aprender IoT con integración de IA.',
+          longDescription:
+            'Plataforma desarrollada con Flask, integrada con OpenAI API y ejecutada en hardware CrowPi L. Incluye ejemplos interactivos con HTML, CSS y JavaScript para enseñanza práctica de IoT.',
           thumbId: 'project-3-thumb',
           carouselImageIds: ['project-3-carousel-1'],
           codeUrl: 'https://github.com',
-          tags: ['React', 'Django', 'Python'],
+          tags: ['Flask', 'OpenAI API', 'IoT', 'HTML', 'JavaScript', 'CrowPi'],
         },
       ],
     },
+
     certificates: {
-      title: 'Certificaciones',
+      title: 'Certificados',
       certificates: [
         {
           id: 'cert1',
-          title: 'Desarrollo Web Full Stack',
-          issuer: 'Academia de Tecnología',
-          date: 'Junio 2023',
+          title: 'Fundamentos de Python',
+          issuer: 'Cisco',
+          date: '2024',
           imageId: 'certificate-1',
         },
         {
           id: 'cert2',
-          title: 'Conceptos Avanzados de React',
-          issuer: 'Universidad de React',
-          date: 'Enero 2023',
+          title: 'Administrador de Base de Datos',
+          issuer: 'Aprende.org',
+          date: '2024',
           imageId: 'certificate-2',
         },
         {
           id: 'cert3',
-          title: 'Profesional en Gestión de BBDD',
-          issuer: 'Escuela de Datos',
-          date: 'Septiembre 2022',
+          title: 'Programación en C#',
+          issuer: 'Aprende.org',
+          date: '2023',
           imageId: 'certificate-3',
+        },
+        {
+          id: 'cert4',
+          title: 'Desarrollo Frontend',
+          issuer: 'Aprende.org',
+          date: '2025',
+          imageId: 'certificate-4',
+        },
+        {
+          id: 'cert5',
+          title: 'Liderazgo en Equipo',
+          issuer: 'Aprende.org',
+          date: '2024',
+          imageId: 'certificate-5',
+        },
+        {
+          id: 'cert6',
+          title: 'Disciplina en el Trabajo',
+          issuer: 'Aprende.org',
+          date: '2024',
+          imageId: 'certificate-6',
         },
       ],
     },
+
     footer: {
-      madeWith: 'Hecho con',
-      by: 'por John Doe',
+      by: 'Axel Enrique García Vázquez',
     },
   },
 };

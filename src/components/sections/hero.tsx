@@ -56,17 +56,17 @@ export default function Hero() {
             
             <div className="flex justify-center md:justify-start gap-4 pt-4">
               <Button asChild variant="outline" size="icon" aria-label="GitHub">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/AxlEnr" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                 </a>
               </Button>
               <Button asChild variant="outline" size="icon" aria-label="LinkedIn">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/axelgarciavazquez" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </Button>
               <Button asChild variant="outline" size="icon" aria-label="Email">
-                <a href="mailto:johndoe@example.com">
+                <a href="mailto:axel.garcia0814@gmail.com">
                   <Mail className="w-5 h-5" />
                 </a>
               </Button>

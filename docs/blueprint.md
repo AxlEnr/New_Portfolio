@@ -1,4 +1,4 @@
-# **App Name**: Blue Spectrum Portfolio
+# **App Name**: Axl Portfolio
 
 ## Core Features:
 
