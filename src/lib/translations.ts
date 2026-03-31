@@ -139,9 +139,9 @@ I focus on building scalable systems, clean architecture, and high-performance b
           id: 'proj1',
           title: 'MIAU - Pet Management Platform',
           shortDescription:
-            'Mobile and backend platform for managing pets, owners, and related services.',
+            'Full-stack platform for managing pets, owners, and services with a scalable API-driven backend.',
           longDescription:
-            'A full-stack application built with Flutter for the mobile frontend and Django for the backend. Designed to manage pets, owners, and related services such as records, tracking, and administrative operations. The system uses an API-driven architecture, authentication, and scalable backend services.',
+            'Full-stack system built with Flutter (mobile) and Django (backend), designed to manage pets, owners, and related services such as medical records, tracking, and administrative workflows. The architecture is API-first, with authentication, modular services, and scalable backend design. Focused on real-world usability, clean data handling, and maintainable structure.',
           thumbId: 'project-miau-thumb',
           carouselImageIds: ['project-miau-1'],
           codeUrl: 'https://github.com',
@@ -151,9 +151,9 @@ I focus on building scalable systems, clean architecture, and high-performance b
           id: 'proj2',
           title: 'Cybersecurity Website',
           shortDescription:
-            'Educational platform focused on cybersecurity awareness.',
+            'Educational web platform focused on cybersecurity awareness and best practices.',
           longDescription:
-            'A web application developed with Angular, focused on educating users about cybersecurity practices, threats, and prevention techniques. Built with a responsive and modular frontend architecture.',
+            'Frontend application developed with Angular, focused on educating users about cybersecurity concepts, threats, and prevention strategies. Built using a modular and scalable architecture, with emphasis on responsive design, structured content delivery, and clean UI/UX for improved learning experience.',
           thumbId: 'project-cyber-thumb',
           carouselImageIds: ['project-cyber-1'],
           codeUrl: 'https://github.com',
@@ -163,9 +163,9 @@ I focus on building scalable systems, clean architecture, and high-performance b
           id: 'proj3',
           title: 'Flower Shop Website (Hidalgo)',
           shortDescription:
-            'Commercial website for a local business with modern UI.',
+            'High-performance commercial website focused on SEO and modern user experience.',
           longDescription:
-            'A modern web application built with React and Next.js for a flower shop business. Focused on performance, SEO, and clean UI/UX to improve digital presence and customer interaction.',
+            'Modern web application built with React and Next.js for a local business. Designed with performance, SEO optimization, and user experience in mind to improve online presence and customer engagement. Implements clean UI, fast loading times, and scalable frontend structure.',
           thumbId: 'project-flowers-thumb',
           carouselImageIds: ['project-flowers-1'],
           codeUrl: 'https://github.com',
@@ -177,7 +177,7 @@ I focus on building scalable systems, clean architecture, and high-performance b
           shortDescription:
             'IoT system for monitoring and controlling water usage in real environments.',
           longDescription:
-            'An IoT solution built with Django (backend), Android (Java) mobile app, and ESP32 programmed in C. Designed to monitor and control water usage in environments like gyms and hotels, integrating hardware and software in a complete system.',
+            'End-to-end IoT solution combining Django backend, Android mobile app (Java), and ESP32 firmware programmed in C. Designed to monitor and control water consumption in environments like gyms and hotels. Integrates hardware and software layers, real-time data handling, and control logic for efficient resource management.',
           thumbId: 'project-1-thumb',
           carouselImageIds: ['project-1-carousel-1'],
           codeUrl: 'https://github.com',
@@ -187,9 +187,9 @@ I focus on building scalable systems, clean architecture, and high-performance b
           id: 'proj5',
           title: 'ContApp - Accounting Learning Platform',
           shortDescription:
-            'Educational platform with task management and evaluations.',
+            'Full-stack educational platform with task management and student evaluation features.',
           longDescription:
-            'A full-stack application developed with React (web), React Native (mobile), Express (backend), and MySQL. Enables teachers to assign activities and evaluate students through an interactive platform.',
+            'Full-stack application built with React (web), React Native (mobile), Express (backend), and MySQL. Designed for teachers to assign tasks, manage content, and evaluate students through an interactive platform. Focused on usability, real-time interaction, and scalable backend structure.',
           thumbId: 'project-2-thumb',
           carouselImageIds: ['project-2-carousel-1'],
           codeUrl: 'https://github.com',
@@ -199,15 +199,15 @@ I focus on building scalable systems, clean architecture, and high-performance b
           id: 'proj6',
           title: 'GAMA - IoT Learning Assistant',
           shortDescription:
-            'Educational assistant for learning IoT with AI integration.',
+            'Interactive IoT learning platform with AI integration for practical education.',
           longDescription:
-            'A learning platform built with Flask, integrated with the OpenAI API, and deployed on CrowPi L hardware. Includes interactive examples using HTML, CSS, and JavaScript to teach IoT concepts in a practical way.',
+            'Educational platform developed with Flask, integrated with OpenAI API, and deployed on CrowPi L hardware. Provides interactive IoT learning experiences using HTML, CSS, and JavaScript examples. Focused on hands-on learning, AI-assisted interaction, and practical understanding of embedded systems.',
           thumbId: 'project-3-thumb',
           carouselImageIds: ['project-3-carousel-1'],
           codeUrl: 'https://github.com',
           tags: ['Flask', 'OpenAI API', 'IoT', 'HTML', 'JavaScript', 'CrowPi'],
         },
-      ],
+      ]
     },
 
     certificates: {
@@ -322,9 +322,9 @@ Me enfoco en construir sistemas escalables, arquitectura limpia y soluciones bac
           id: 'proj1',
           title: 'MIAU - Plataforma de Gestión de Mascotas',
           shortDescription:
-            'Plataforma móvil y backend para la gestión de mascotas, dueños y servicios relacionados.',
+            'Plataforma full-stack para gestionar mascotas, dueños y servicios mediante una arquitectura basada en APIs.',
           longDescription:
-            'Aplicación full-stack desarrollada con Flutter para el frontend móvil y Django para el backend. Permite gestionar mascotas, dueños y servicios asociados como registros, seguimiento y operaciones administrativas. Implementa una arquitectura basada en APIs, autenticación y backend escalable.',
+            'Sistema full-stack desarrollado con Flutter (móvil) y Django (backend), diseñado para la gestión de mascotas, dueños y servicios relacionados como historiales, seguimiento y operaciones administrativas. Implementa una arquitectura API-first con autenticación, servicios modulares y un backend escalable, enfocado en usabilidad real y mantenibilidad del sistema.',
           thumbId: 'project-miau-thumb',
           carouselImageIds: ['project-miau-1'],
           codeUrl: 'https://github.com',
@@ -334,9 +334,9 @@ Me enfoco en construir sistemas escalables, arquitectura limpia y soluciones bac
           id: 'proj2',
           title: 'Sitio Web de Ciberseguridad',
           shortDescription:
-            'Plataforma educativa enfocada en concientización en ciberseguridad.',
+            'Plataforma web educativa enfocada en concientización y buenas prácticas de ciberseguridad.',
           longDescription:
-            'Aplicación web desarrollada con Angular, enfocada en educar sobre buenas prácticas, amenazas y prevención en ciberseguridad, utilizando una arquitectura frontend modular.',
+            'Aplicación frontend desarrollada con Angular, orientada a la enseñanza de conceptos de ciberseguridad, amenazas y estrategias de prevención. Construida con una arquitectura modular y escalable, priorizando diseño responsivo, claridad en la información y una experiencia de usuario limpia para facilitar el aprendizaje.',
           thumbId: 'project-cyber-thumb',
           carouselImageIds: ['project-cyber-1'],
           codeUrl: 'https://github.com',
@@ -346,9 +346,9 @@ Me enfoco en construir sistemas escalables, arquitectura limpia y soluciones bac
           id: 'proj3',
           title: 'Página Web de Flores (Hidalgo)',
           shortDescription:
-            'Sitio web comercial moderno para negocio local.',
+            'Sitio web comercial optimizado para rendimiento, SEO y experiencia de usuario.',
           longDescription:
-            'Aplicación web desarrollada con React y Next.js, enfocada en rendimiento, SEO y experiencia de usuario para mejorar la presencia digital del negocio.',
+            'Aplicación web moderna desarrollada con React y Next.js para un negocio local. Diseñada con enfoque en rendimiento, posicionamiento SEO y experiencia de usuario, mejorando la presencia digital y la interacción con clientes. Implementa una interfaz limpia, tiempos de carga rápidos y una estructura frontend escalable.',
           thumbId: 'project-flowers-thumb',
           carouselImageIds: ['project-flowers-1'],
           codeUrl: 'https://github.com',
@@ -358,9 +358,9 @@ Me enfoco en construir sistemas escalables, arquitectura limpia y soluciones bac
           id: 'proj4',
           title: 'HydroStop - Sistema IoT de Regaderas Inteligentes',
           shortDescription:
-            'Sistema IoT para monitoreo y control de consumo de agua.',
+            'Sistema IoT para monitorear y controlar el consumo de agua en entornos reales.',
           longDescription:
-            'Solución IoT desarrollada con Django (backend), aplicación Android en Java y ESP32 programado en C. Permite controlar y monitorear el uso de agua en entornos reales como gimnasios y hoteles.',
+            'Solución IoT integral que combina backend en Django, aplicación móvil Android (Java) y firmware en ESP32 programado en C. Diseñada para monitorear y controlar el consumo de agua en espacios como gimnasios y hoteles. Integra hardware y software, manejo de datos en tiempo real y lógica de control para optimizar el uso de recursos.',
           thumbId: 'project-1-thumb',
           carouselImageIds: ['project-1-carousel-1'],
           codeUrl: 'https://github.com',
@@ -370,9 +370,9 @@ Me enfoco en construir sistemas escalables, arquitectura limpia y soluciones bac
           id: 'proj5',
           title: 'ContApp - Plataforma de Aprendizaje Contable',
           shortDescription:
-            'Plataforma educativa con gestión de tareas y evaluaciones.',
+            'Plataforma educativa full-stack con gestión de actividades y evaluación de estudiantes.',
           longDescription:
-            'Aplicación full-stack desarrollada con React, React Native, Express y MySQL, que permite a profesores asignar actividades y evaluar estudiantes.',
+            'Aplicación full-stack desarrollada con React (web), React Native (móvil), Express (backend) y MySQL. Permite a docentes gestionar contenido, asignar tareas y evaluar estudiantes dentro de una plataforma interactiva. Enfocada en usabilidad, interacción en tiempo real y una arquitectura backend escalable.',
           thumbId: 'project-2-thumb',
           carouselImageIds: ['project-2-carousel-1'],
           codeUrl: 'https://github.com',
@@ -382,15 +382,15 @@ Me enfoco en construir sistemas escalables, arquitectura limpia y soluciones bac
           id: 'proj6',
           title: 'GAMA - Asistente de Aprendizaje IoT',
           shortDescription:
-            'Asistente educativo para aprender IoT con integración de IA.',
+            'Plataforma interactiva para aprender IoT con integración de inteligencia artificial.',
           longDescription:
-            'Plataforma desarrollada con Flask, integrada con OpenAI API y ejecutada en hardware CrowPi L. Incluye ejemplos interactivos con HTML, CSS y JavaScript para enseñanza práctica de IoT.',
+            'Plataforma educativa desarrollada con Flask, integrada con la API de OpenAI y desplegada en hardware CrowPi L. Ofrece experiencias interactivas para el aprendizaje de IoT mediante ejemplos prácticos con HTML, CSS y JavaScript. Enfocada en aprendizaje práctico, interacción asistida por IA y comprensión de sistemas embebidos.',
           thumbId: 'project-3-thumb',
           carouselImageIds: ['project-3-carousel-1'],
           codeUrl: 'https://github.com',
           tags: ['Flask', 'OpenAI API', 'IoT', 'HTML', 'JavaScript', 'CrowPi'],
         },
-      ],
+      ]
     },
 
     certificates: {
