@@ -4,14 +4,12 @@ import { useI18n } from '@/hooks/use-i18n';
 import TechIcon from '@/components/tech-icon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-// 🔥 fallback (por si aún no migras completamente)
 const mainStackFallback = ['laravel', 'react', 'mongoDB', 'mysql'];
 const otherTechFallback = ['angular', 'flutter', 'django', 'sqlite', 'postgresql'];
 
 export default function Skills() {
   const { t } = useI18n();
 
-  // 🔥 nuevo stack dinámico desde translations
   const stack = t('skills.stack');
 
   const categories = [

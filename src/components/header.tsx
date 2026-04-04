@@ -17,6 +17,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { id: 'home', labelKey: 'nav.home' },
   { id: 'skills', labelKey: 'nav.skills' },
+  { id: 'experience', labelKey: 'nav.experience' },
   { id: 'projects', labelKey: 'nav.projects' },
   { id: 'certificates', labelKey: 'nav.certificates' },
   { id: 'contact', labelKey: 'nav.contact' },
@@ -28,7 +29,11 @@ export default function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
 
   const handleResumeDownload = (language: 'en' | 'es') => {
-    alert(`Downloading ${language.toUpperCase()} resume...`);
+    if (language === 'en') {
+      window.open('/resumes/resume_en.docx', '_blank');
+    } else {
+      window.open('/resumes/resume_es.docx', '_blank');
+    }
   };
 
   const NavContent = ({ isMobile = false }) => (
@@ -53,7 +58,6 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <a href="#home" className="flex ml-1 md:ml-4 items-center gap-2 font-bold text-lg font-headline">
-          {/* <Code className="h-6 w-6 text-primary" /> */}
           <span>{t('hero.name')}</span>
         </a>
 

@@ -33,6 +33,8 @@ const techMap: Record<string, string> = {
   prismaorm: "devicon-prisma-original",
   android: "devicon-android-plain colored",
   java: "devicon-java-plain colored",
+  php: "devicon-php-plain colored",
+  python: "devicon-python-plain colored",
 };
 
 const customIcons = [
