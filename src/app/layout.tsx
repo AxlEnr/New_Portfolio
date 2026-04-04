@@ -4,8 +4,8 @@ import { I18nProvider } from '@/context/i18n-provider';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Blue Spectrum Portfolio',
-  description: 'A personal portfolio showcasing skills and projects.',
+  title: 'Axel Garcia - Portfolio',
+  description: 'A personal portfolio showcasing experience, skills, certifications and projects.',
 };
 
 export default function RootLayout({
